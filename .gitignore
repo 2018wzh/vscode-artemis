@@ -1,0 +1,30 @@
+# VS Code files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+# Dependency directories
+node_modules/
+
+# Build output
+out/
+dist/
+
+# Test results
+.vscode-test/
+
+data/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

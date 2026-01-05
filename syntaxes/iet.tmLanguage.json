@@ -1,0 +1,106 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Artemis IET",
+    "scopeName": "source.iet",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#labels"
+        },
+        {
+            "include": "#commands"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#numbers"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.iet",
+                    "match": "//.*$"
+                },
+                {
+                    "name": "comment.block.iet",
+                    "begin": "/\\*",
+                    "end": "\\*/"
+                }
+            ]
+        },
+        "labels": {
+            "patterns": [
+                {
+                    "name": "entity.name.section.iet",
+                    "match": "^\\*.*$"
+                }
+            ]
+        },
+        "commands": {
+            "patterns": [
+                {
+                    "name": "keyword.control.iet",
+                    "match": "\\b(anime|automode|autosave|backlog|call|calllua|callnative|caption|chgmsg|debug|debugprint|debugreload|delonautomodein|delonautomodeout|delonbacklogin|delonbacklogout|delonclick|deloncommandskipin|deloncommandskipout|deloncontrolskipin|deloncontrolskipout|delondirchg|delondrag|delondragin|delondragout|delonhidein|delonhideout|delonpush|delonrollout|delonrollover|delonsoundfinish|dialog|direction|else|elseif|exec|exit|file|flip|font|fontdefault|fontinit|glyph|hide|httpget|httppost|if|ime|indent|jump|keyconfig|link|linkdisable|linkenable|load|loop|lua|lyc|lydel|lydrag|lyedit|lyprop|lytween|lytweendel|macroadd|macrodel|mouse|openbrowser|print|productid|prohibit|purchase|rclick|reset|return|rp|rt|ruby|save|savess|scein|sceout|scetween|seplay|sestop|setonautomodein|setonautomodeout|setonbacklogin|setonbacklogout|setonclick|setoncommandskipin|setoncommandskipout|setoncontrolskipin|setoncontrolskipout|setondirchg|setondrag|setondragin|setondragout|setonhidein|setonhideout|setonpush|setonrollout|setonrollover|setonsoundfinish|sfade|sfadein|sfadeout|skip|skippable|slider|splay|sstop|statusbar|stop|sxfade|tag|takess|trans|tweenset|uidel|var|vibrate|video|voice|wait|writebacklog)\\b"
+                },
+                {
+                    "name": "variable.parameter.iet",
+                    "match": "\\b(align|allfont|allow|alpha|anchorcenter|anchorx|anchory|background_path|backlog|call|caps|char|clear|clip|color|command|controller_path|data|default|delay|delete|delimiter|diff|dir|direction|draggable|dst|ease|entirealpha|entireanchorx|entireanchory|entirerotate|entirexscale|entireyscale|escape|estimate|face|file|filename|foot|format|from|function|gain|handler|head|height|hide|homing|hung|id|includefont|input|kerning|key|keys|label|layer|layered|layermode|left|length|level|local|loop|mask|message|messagelayer|method|mode|module|monospace|msec|name|nest|noexist|outlinecolor|pair|param|penetration|position|prefix|purchase|randomdelay|result|reversex|reversey|role|rotate|rplayer|rpleft|rptop|rubyface|rubykerning|rubysize|rule|save|scenario|se|shadowcolor|size|skip|source|spacebottom|spacemiddle|spacetop|src|stack|stopbyclick|stopbystop|string|style|sync|syncse|system|target|text|textfield|time|title|to|top|type|unread|url|useclickablethreshold|vague|var_max|var_min|var_name|varname|varname_code|varname_data|vertical|video|visible|width|window|x|xscale|y|yoyo|yscale|zerox)\\b"
+                },
+                {
+                    "name": "support.function.iet",
+                    "match": "\\b(array|base64_encode|character_reference_to_utf8|convert_encoding|date|delete|explode|file_crc|file_exist|file_update_time|find|fullscreen|get_backlog_size|get_backlog_tags|get_font|get_layer_info|get_message_layer_height|get_message_layer_width|get_message_tags|get_sound_info|hmac_sha1_base64|implode|length|os|random|screen_height|screen_width|substr|to_sjis|to_utf8|unixtime|url_decode|url_encode|var_exist|debug|getMousePoint|getScriptBlock|getScriptStack|getScriptStatus|getTouchCount|getTouchPoint|isDecide|isDown|isDownEdge|isPush|isUpEdge|now|random|setEventHandler|setScriptStack|setScriptStatus|setTagFilter|tag)\\b"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.iet",
+                    "match": "=|/|@|&autoinsert|&linetag|&scpsupport"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.iet",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.iet",
+                            "match": "\\\\."
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.single.iet",
+                    "begin": "'",
+                    "end": "'",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.iet",
+                            "match": "\\\\."
+                        }
+                    ]
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.iet",
+                    "match": "\\b\\d+(\\.\\d+)?\\b"
+                }
+            ]
+        }
+    }
+}

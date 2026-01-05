@@ -1,0 +1,35 @@
+{
+    "name": "vscode-artemis",
+    "displayName": "Artemis Engine Support for VSCode",
+    "description": "Syntax highlighting for Artemis Engine .iet files",
+    "version": "0.0.1",
+    "publisher": "2018wzh",
+    "engines": {
+        "vscode": "^1.50.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "iet",
+                "aliases": [
+                    "Artemis IET",
+                    "iet"
+                ],
+                "extensions": [
+                    ".iet"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "iet",
+                "scopeName": "source.iet",
+                "path": "./syntaxes/iet.tmLanguage.json"
+            }
+        ]
+    }
+}
