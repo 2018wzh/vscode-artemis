@@ -1,5 +1,5 @@
 {
-    "name": "vscode-artemis",
+    "name": "artemis-engine-support",
     "displayName": "Artemis Engine Support for VSCode",
     "description": "Syntax highlighting for Artemis Engine .iet files",
     "version": "0.0.1",
