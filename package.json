@@ -4,6 +4,9 @@
     "description": "Syntax highlighting for Artemis Engine .iet files",
     "version": "0.0.1",
     "publisher": "2018wzh",
+    "repository": {
+        "url": "https://github.com/2018wzh/vscode-artemis.git"
+    },
     "engines": {
         "vscode": "^1.50.0"
     },
